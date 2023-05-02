@@ -87,6 +87,7 @@ body {
 }
 
 .container {
+  /* padding을 너무 크게 잡지 않는다 */
   width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
@@ -137,6 +138,7 @@ body {
 }
 
 .hero .photo img {
+  /* image에는 직접적으로 크기 지정을 하지 않는다 */
   border-radius: 100%;
   border-top-right-radius: 0;
 }
@@ -152,4 +154,66 @@ body {
   border-radius: 100%;
   border-top-right-radius: 0;
   z-index: -1;
+}
+
+/* skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 134px 0;
+  gap: 45px;
+  text-align: center;
+}
+
+.skills .item {
+  padding: 0 40px;
+}
+
+.skills .item .icon {
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+}
+
+.skills .item h3 {
+  font-size: 27px;
+  font-weight: 700;
+  margin: 63px 0 20px;
+}
+.skills .item p {
+  font-style: 17px;
+}
+
+/* portfolio */
+.portfolio {
+  padding: 50px 0;
+}
+
+.works h2 {
+  margin-bottom: 56px;
+  font-style: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+.works ul {
+  /* list element의 이미지를 백그라운드로 처리하면 일이 복잡해진다. */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.works ul li .photo {
+  height: 330px;
+}
+
+.works ul li .photo img {
+  height: 100%;
+  /* 크기에 맞게 이미지를 크롭 */
+  object-fit: cover;
+}
+.works ul li .title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 0 4px;
 }
